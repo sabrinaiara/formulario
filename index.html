@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Atividades Extracurriculares - Formulário</title>
+    <title>Site com Abas</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -40,70 +40,18 @@
             padding: 20px;
             border-top: none;
         }
-    </style>
-</head>
-<body>
 
-<h2>Site com Abas</h2>
+        /* Estilo das imagens */
+        .home-images {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
 
-<div class="tab">
-    <button class="tablinks" onclick="openTab(event, 'Home')" id="defaultOpen">Home</button>
-    <button class="tablinks" onclick="openTab(event, 'Contato')">Contato</button>
-    <button class="tablinks" onclick="openTab(event, 'Formulario')">Formulário</button>
-</div>
+        .home-images img {
+            width: 45%;
+            border-radius: 8px;
+        }
 
-<!-- Conteúdo da aba Home -->
-<div id="Home" class="tabcontent">
-    <h3>Home</h3>
-    <p>Bem-vindo à página inicial!</p>
-</div>
-
-<!-- Conteúdo da aba Contato -->
-<div id="Contato" class="tabcontent">
-    <h3>Contato</h3>
-    <p>Email: exemplo@exemplo.com</p>
-    <p>Telefone: (00) 00000-0000</p>
-</div>
-
-<!-- Conteúdo da aba Formulário -->
-<div id="Formulario" class="tabcontent">
-    <h3>Formulário</h3>
-    <!-- Substitua o link do iframe pelo embed do seu Google Forms -->
-    <iframe 
-        src="https://forms.gle/CL2Kvv5NLwQHnYpL7" 
-        width="100%" 
-        height="700" 
-        frameborder="0" 
-        marginheight="0" 
-        marginwidth="0">
-        Carregando…
-    </iframe>
-</div>
-
-<script>
-function openTab(evt, tabName) {
-    var i, tabcontent, tablinks;
-
-    // Oculta todas as abas
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-
-    // Remove a classe "active" de todos os botões
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-
-    // Exibe a aba selecionada
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
-
-// Abre a aba padrão
-document.getElementById("defaultOpen").click();
-</script>
-
-</body>
-</html>
+        /* Texto */
+        .texto-atividades
